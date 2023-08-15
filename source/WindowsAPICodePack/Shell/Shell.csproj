@@ -1,14 +1,17 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+	<Import Project="$(NuGetPackageRoot)nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.props" Condition="Exists('$(NuGetPackageRoot)nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.props')" />
 	<PropertyGroup>
+		<PackageOutputPath>$(SolutionDir)Packages/</PackageOutputPath>
+		<Version>$(VersionPrefix).$(VersionSuffix)</Version>
 		<AssemblyName>Microsoft.WindowsAPICodePack.Shell</AssemblyName>
-		<PackageId>Microsoft-WindowsAPICodePack-Shell</PackageId>
+		<PackageId>Net4x.Microsoft-WindowsAPICodePack-Shell</PackageId>
 		<VersionPrefix>1.1.5</VersionPrefix>
 		<Title>$(AssemblyName)</Title>
 		<Authors>rpastric;contre;dahall</Authors>
 		<Company>Microsoft</Company>
 		<Product>Microsoft Windows API Code Pack for .NET Framework</Product>
-		<PackageLicenseUrl>https://github.com/contre/Windows-API-Code-Pack-1.1/LICENSE</PackageLicenseUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageProjectUrl>https://github.com/contre/Windows-API-Code-Pack-1.1</PackageProjectUrl>
 		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
 		<Description>The Shell code for the WindowsAPICodePack. This is an updated version containing all available bug fixes for this code as of 2020-01-04.</Description>
@@ -21,7 +24,7 @@
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
-		<TargetFrameworks>net452;net462;net472;net48;net481;netcoreapp3.1;;net6.0-windows;net7.0-windows</TargetFrameworks>
+		<TargetFrameworks>net40;net45;net452;net462;net472;net48;net481;netcoreapp3.1;net5.0-windows;net6.0-windows;net7.0-windows</TargetFrameworks>
 		<UseWindowsForms>true</UseWindowsForms>
 		<UseWPF>true</UseWPF>
 		<LangVersion>latest</LangVersion>
@@ -30,6 +33,9 @@
 		<SignAssembly>true</SignAssembly>
 		<AssemblyOriginatorKeyFile>ProjectSignKey.snk</AssemblyOriginatorKeyFile>
 	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="NuGetUtility" Version="$(NuGetUtilityVersion)" PrivateAssets="All" />
+	</ItemGroup>
 	<PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
@@ -70,4 +76,5 @@
 			<LastGenOutput>LocalizedMessages.Designer.cs</LastGenOutput>
 		</EmbeddedResource>
 	</ItemGroup>
+	<Import Project="$(NuGetPackageRoot)nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.targets" Condition="Exists('$(NuGetPackageRoot)nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.targets')" />
 </Project>
