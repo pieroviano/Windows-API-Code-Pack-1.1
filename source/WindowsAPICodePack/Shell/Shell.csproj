@@ -6,7 +6,6 @@
     <Version>$(VersionPrefix).$(VersionSuffix)</Version>
     <AssemblyName>Microsoft.WindowsAPICodePack.Shell</AssemblyName>
     <PackageId>Net4x.Microsoft-WindowsAPICodePack-Shell</PackageId>
-    <VersionPrefix>1.1.5</VersionPrefix>
     <Title>$(AssemblyName)</Title>
     <Authors>rpastric;contre;dahall</Authors>
     <Company>Microsoft</Company>
