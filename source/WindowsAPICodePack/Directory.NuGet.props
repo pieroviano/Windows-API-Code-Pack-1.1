@@ -13,7 +13,7 @@
     <PdfRecognizerLibraryVersion>1.2.0</PdfRecognizerLibraryVersion>
     <SetupCustomActionVersion>1.1.0</SetupCustomActionVersion>
     <ImmatricolazioniLibraries>1.0.0</ImmatricolazioniLibraries>
-    <NumberConverterLibVersion>1.0.0</NumberConverterLibVersion>
+    <NumberConverterLibVersion>1.1.0</NumberConverterLibVersion>
     <FluentValidationVersion>11.5.2</FluentValidationVersion>
     <FluentValidation9Version>9.2.2</FluentValidation9Version>
     <UnitTestLibrary>1.2.0</UnitTestLibrary>
@@ -97,7 +97,7 @@
     <Xsd2DbVersion>1.2.0</Xsd2DbVersion>
     <iTextCoreVersion>1.2.0</iTextCoreVersion>
     <PdfRepresentationVersion>1.2.0</PdfRepresentationVersion>
-    <StarbVersion>23.6.0</StarbVersion>
+    <StarbVersion>30.0.0</StarbVersion>
     <NuGetUtilityVersion>2.0.12</NuGetUtilityVersion>
     <DocumentoUnicoVersion>2.2.0</DocumentoUnicoVersion>
     <SystemDataDataSetExtensionsVersion>4.5.0</SystemDataDataSetExtensionsVersion>
@@ -126,8 +126,8 @@
     <Net4xConfigurationVersion>1.1.0</Net4xConfigurationVersion>
     <BarcodeVersion>1.1.0</BarcodeVersion>
     <CompressExistingPDFVersion>2.0.0</CompressExistingPDFVersion>
-    <AppDomainAlternativeVersion>1.8.0</AppDomainAlternativeVersion>
-    <Win32InteropVersion>1.0.1</Win32InteropVersion>
+    <AppDomainAlternativeVersion>1.9.0</AppDomainAlternativeVersion>
+    <Win32InteropVersion>1.0.2</Win32InteropVersion>
     <EasyTabsVersion>1.1.0</EasyTabsVersion>
     <WindowsAPICodePackVersion>1.1.6</WindowsAPICodePackVersion>
     <AsyncEnumerableVersion>1.2.0</AsyncEnumerableVersion>
@@ -148,5 +148,6 @@
     <PackAsLibraryVersion>1.1.0</PackAsLibraryVersion>
     <TitaniumWebProxyNet40Version>2.0.0</TitaniumWebProxyNet40Version>
     <UploadPackagesVersion>1.0.0</UploadPackagesVersion>
+    <BarcodeVersiWindowsAPICodePackVersionon>1.1.0</BarcodeVersiWindowsAPICodePackVersionon>
   </PropertyGroup>
 </Project>
