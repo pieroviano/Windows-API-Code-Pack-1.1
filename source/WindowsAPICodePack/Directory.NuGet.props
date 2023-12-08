@@ -4,6 +4,7 @@
     <NuGetPackageRoot Condition="'$(NuGetPackageRoot)'=='' and '$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' != 'true'">~/.nuget/packages/</NuGetPackageRoot>
     <VersionBuildSuffix Condition="'$(Configuration)'!='Release'">*-*</VersionBuildSuffix>
     <VersionBuildSuffix Condition="'$(Configuration)'=='Release'">*</VersionBuildSuffix>
+    <NuGetUtilityVersion Condition="'$(NuGetUtilityVersion)' == ''">2.0.12</NuGetUtilityVersion>
     <DirectoryNuGet>true</DirectoryNuGet>
     <ImmatricolazioniWsLibrariesVersion>1.1.0</ImmatricolazioniWsLibrariesVersion>
     <FatturaElettronicaVersion>3.2.1</FatturaElettronicaVersion>
@@ -98,7 +99,6 @@
     <iTextCoreVersion>1.2.0</iTextCoreVersion>
     <PdfRepresentationVersion>1.2.0</PdfRepresentationVersion>
     <StarbVersion>30.0.0</StarbVersion>
-    <NuGetUtilityVersion>2.0.12</NuGetUtilityVersion>
     <DocumentoUnicoVersion>2.2.0</DocumentoUnicoVersion>
     <SystemDataDataSetExtensionsVersion>4.5.0</SystemDataDataSetExtensionsVersion>
     <PagedListVersion>4.5.0</PagedListVersion>
@@ -139,7 +139,6 @@
     <WpfAdornedControlVersion>1.1.0</WpfAdornedControlVersion>
     <CreateHiddenProcessVersion>1.1.0</CreateHiddenProcessVersion>
     <HostAppInPanelVersion>1.1.0</HostAppInPanelVersion>
-    <NuGetUtilityVersion Condition="'$(NuGetUtilityVersion)' == ''">2.0.12</NuGetUtilityVersion>
     <SeleniumLibraryVersion>1.1.0</SeleniumLibraryVersion>
     <CodiceFiscaleVersion>1.1.0</CodiceFiscaleVersion>
     <SystemDrawingCommon8Version>8.0.0</SystemDrawingCommon8Version>
