@@ -148,6 +148,5 @@
     <PackAsLibraryVersion>1.1.0</PackAsLibraryVersion>
     <TitaniumWebProxyNet40Version>2.0.0</TitaniumWebProxyNet40Version>
     <UploadPackagesVersion>1.0.0</UploadPackagesVersion>
-    <BarcodeVersiWindowsAPICodePackVersionon>1.1.0</BarcodeVersiWindowsAPICodePackVersionon>
   </PropertyGroup>
 </Project>
