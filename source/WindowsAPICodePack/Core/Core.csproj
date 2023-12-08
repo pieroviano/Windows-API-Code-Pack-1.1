@@ -11,12 +11,12 @@
     <Company>Microsoft</Company>
     <Product>Microsoft Windows API Code Pack for .NET Framework</Product>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/contre/Windows-API-Code-Pack-1.1</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/pieroviano/Windows-API-Code-Pack-1.1</PackageProjectUrl>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <Description>The Core code for the WindowsAPICodePack. This is an updated version containing all available bug fixes for this code as of 2020-01-04.</Description>
-    <PackageReleaseNotes>See CHANGELOG.md in project site. https://github.com/contre/Windows-API-Code-Pack-1.1/blob/master/CHANGELOG.md </PackageReleaseNotes>
+    <PackageReleaseNotes>See CHANGELOG.md in project site. https://github.com/pieroviano/Windows-API-Code-Pack-1.1/blob/master/CHANGELOG.md </PackageReleaseNotes>
     <Copyright>Copyright © 2020</Copyright>
-    <RepositoryUrl>https://github.com/contre/Windows-API-Code-Pack-1.1</RepositoryUrl>
+    <RepositoryUrl>https://github.com/pieroviano/Windows-API-Code-Pack-1.1</RepositoryUrl>
     <RepositoryType>.git</RepositoryType>
     <NeutralLanguage>en-US</NeutralLanguage>
     <PackageTags>WindowsAPICodePack</PackageTags>
@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="NuGetUtility" Version="$(NuGetUtilityVersion)" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="all" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
