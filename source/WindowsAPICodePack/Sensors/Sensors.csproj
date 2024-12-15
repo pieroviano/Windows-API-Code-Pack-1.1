@@ -3,6 +3,8 @@
     <Import Condition="Exists('$(NuGetPackageRoot)net4x.nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.props')" Project="$(NuGetPackageRoot)net4x.nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.props" />
     <PropertyGroup>
         <PackageOutputPath>$(SolutionDir)Packages/</PackageOutputPath>
+        <WindowsAPICodePackVersion Condition="'$(WindowsAPICodePackVersion)'==''">1.2.0</WindowsAPICodePackVersion>
+        <VersionPrefix>$(WindowsAPICodePackVersion)</VersionPrefix>
         <Version>$(VersionPrefix).$(VersionSuffix)</Version>
         <AssemblyName>Microsoft.WindowsAPICodePack.Sensors</AssemblyName>
         <PackageId>Net4x.Microsoft-WindowsAPICodePack-Sensors</PackageId>
