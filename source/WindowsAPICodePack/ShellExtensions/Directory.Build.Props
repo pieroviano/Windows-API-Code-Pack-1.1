@@ -1,16 +1,12 @@
 <Project>
     <PropertyGroup>
+        <ParentDirectoryBuildProps>$([MSBuild]::GetPathOfFileAbove('Directory.Build.Props', '$(MSBuildThisFileDirectory)../'))</ParentDirectoryBuildProps>
+    </PropertyGroup>
+    <Import Project="$(ParentDirectoryBuildProps)" Condition="'$(ParentDirectoryBuildProps)'!=''" />
+    <PropertyGroup>
         <NuGetPackageRoot Condition="'$(NuGetPackageRoot)'=='' and '$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))'=='true'">$(USERPROFILE)\.nuget\packages\</NuGetPackageRoot>
         <NuGetPackageRoot Condition="'$(NuGetPackageRoot)'=='' and '$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))'!='true'">~/.nuget/packages/</NuGetPackageRoot>
-        <VersionBuildSuffix Condition="'$(Configuration)'!='Release'">*</VersionBuildSuffix>
-        <VersionBuildSuffix Condition="'$(Configuration)'=='Release'">*</VersionBuildSuffix>
         <NuGetUtilityVersion Condition="'$(NuGetUtilityVersion)'==''">1.0.15</NuGetUtilityVersion>
-        <DirectoryNuGet Condition="'$(DirectoryNuGet)'==''">true</DirectoryNuGet>
-        <VersionBuildSuffix Condition="'$(VersionBuildSuffix)'==''">*</VersionBuildSuffix>
-        <ObfuscarVersion>2.2.37</ObfuscarVersion>
-        <WindowsAPICodePackVersion>1.2.0</WindowsAPICodePackVersion>
     </PropertyGroup>
-    <PropertyGroup>
-        <MinimalDirectoryNuGetProps Condition="'$(MinimalDirectoryNuGetProps)'==''">true</MinimalDirectoryNuGetProps>
-    </PropertyGroup>
+    <Import Project="$(NuGetPackageRoot)net4x.nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.props" Condition="Exists('$(NuGetPackageRoot)net4x.nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.props')" />
 </Project>

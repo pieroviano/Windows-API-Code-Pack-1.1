@@ -1,9 +1,13 @@
 <Project>
-  <Import Project="Directory.NuGet.props" Condition="'$(DirectoryNuGet)'==''" />
-  <PropertyGroup>
-    <VersionPrefix>$(SensorsnugetVersion)</VersionPrefix>
-    <VersionSuffix Condition="'$(Configuration)'!='Release'">0-at20241203024734</VersionSuffix>
-    <VersionSuffix Condition="'$(Configuration)'=='Release'">0</VersionSuffix>
-    <SolutionDir Condition="'$(SolutionDir)'==''">$(MSBuildThisFileDirectory)</SolutionDir>
-  </PropertyGroup>
+    <Import Project="Directory.NuGet.props" Condition="'$(DirectoryNuGet)'==''" />
+    <PropertyGroup>
+        <VersionPrefix>$(SensorsnugetVersion)</VersionPrefix>
+        <VersionSuffix Condition="'$(Configuration)'!='Release'">0-at20241203024734</VersionSuffix>
+        <VersionSuffix Condition="'$(Configuration)'=='Release'">0</VersionSuffix>
+        <SolutionDir Condition="'$(SolutionDir)'==''">$(MSBuildThisFileDirectory)</SolutionDir>
+    </PropertyGroup>
+    <PropertyGroup>
+        <NuGetUtilityVersion Condition="'$(NuGetUtilityVersion)'==''">1.0.15</NuGetUtilityVersion>
+    </PropertyGroup>
+    <Import Project="$(NuGetPackageRoot)net4x.nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.props" Condition="Exists('$(NuGetPackageRoot)net4x.nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.props')" />
 </Project>
